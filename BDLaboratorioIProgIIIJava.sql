@@ -1,14 +1,14 @@
 
-create database Lab;
+create database if exists Lab;
 
-use lab;
+use Lab;
 
 Create Table Contactos(
 	Id int not null auto_increment,
     Nombre varchar(50),
     Edad int,
-    Email varchar(50),
-    NumeroDeTelefono varchar(50),
+    Email varchar(30),
+    NumeroDeTelefono varchar(10),
     primary key(Id)
 );
 
@@ -19,7 +19,7 @@ Create procedure sp_MostrarContactos()
 begin
 	select * from Contactos;
 end$$
-
+delimiter ;
 call sp_MostrarContactos();
 
 --proc para insertar contactos
@@ -35,8 +35,9 @@ begin
 				values(Nombre,Edad,Email,NumeroDeTelefono);
 end
 $$
+delimiter ;
 
-call sp_GuardarContacto('Jose wilian Leiva Miranda', 23, 'jwlm@gmail.com', '7589-3215');
+call sp_GuardarContacto('Manuel Perlera', 23, 'manuenitoo@gmail.com', '7589-3215');
 
 --proc para actualizar contacto
 delimiter $$
@@ -56,6 +57,7 @@ begin
     where Contactos.Id = id;
 end
 $$
+delimiter ;
 
 call sp_ActualizarContacto(2,'Ruben Hernández', 16, 'rb@gmail.com', '7777-3215');
 
@@ -68,6 +70,7 @@ begin
 	delete from Contactos where Contactos.Id = id;
 end
 $$
+delimiter ;
 
 call sp_MostrarContactos();
 call sp_EliminarContacto(9);

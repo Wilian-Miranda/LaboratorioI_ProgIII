@@ -1,2 +1,2 @@
 # LaboratorioI_ProgIII
-Ejercicio de laboratorio de un crud con Java y NetBeans.
+Ejercicio de laboratorio de un CRUD con Java y MySQL.
