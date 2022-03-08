@@ -1,4 +1,4 @@
-package com.unab.domain;
+package com.unab.entidades;
 
 public class Contactos {
 

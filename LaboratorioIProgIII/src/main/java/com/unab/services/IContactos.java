@@ -1,7 +1,7 @@
 package com.unab.services;
 
 import java.util.ArrayList;
-import com.unab.domain.Contactos;
+import com.unab.entidades.Contactos;
 
 public interface IContactos {
     

@@ -1,6 +1,6 @@
-package com.unab.test;
+package com.unab.vistas;
 
-import com.unab.domain.*;
+import com.unab.entidades.Contactos;
 import com.unab.dao.*;
 
 import java.awt.*;

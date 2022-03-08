@@ -1,7 +1,7 @@
 package com.unab.dao;
 
-import com.unab.db.Conexion;
-import com.unab.domain.Contactos;
+import com.unab.conexiondb.Conexion;
+import com.unab.entidades.Contactos;
 import com.unab.services.IContactos;
 
 import java.sql.*;
